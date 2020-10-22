@@ -21,9 +21,7 @@
           </div>
           <div class="product-info">
             <h1>{{ title }}</h1>
-            <!-- solution -->
             <p>{{ sale }}</p>
-            <!-- solution -->
             <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
             <ul>
@@ -31,13 +29,11 @@
             </ul>
 
             <div 
+              class="color-circle" 
               v-for="(variant, index) in variants" 
               :key="variant.id" 
               @mouseover="updateVariant(index)" 
-              class="color-circle" 
-              :style="{ backgroundColor: variant.color }">
-            </div>
-            
+              :style="{ backgroundColor: variant.color }"></div>
             <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" v-on:click="addToCart">Add to Cart</button>
           </div>
         </div>
