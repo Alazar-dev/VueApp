@@ -13,16 +13,13 @@
       <div class="nav-bar"></div>
 
       <div class="cart">Cart({{ cart }})</div>
-      <product-display :premium="premium"></product-display> 
-      <product-details :detail="details"></product-details> 
+      <product-display :premium="premium" @add-to-cart="updateCart"></product-display> 
     
-      
     </div>
 
     <!-- Import App -->
     <script src="./main.js"></script>
     <script src="./components/productDisplay.js"></script>
-    <script src="./components/productDetails.js"></script>
 
     <!-- Mount App -->
     <script>

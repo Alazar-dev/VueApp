@@ -7,5 +7,9 @@ const app = Vue.createApp({
         }
         
     },
-    methods: {}
+    methods: {
+        updateCart(){
+          this.cart +=1
+        }
+    }
 })
